@@ -1,0 +1,173 @@
+.job-card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+}
+
+.job-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.job-company {
+  margin: 0;
+  font-size: 20px;
+  color: #111827;
+}
+
+.job-position {
+  margin: 4px 0 0 0;
+  color: #4b5563;
+}
+
+.job-badge {
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.status-applied {
+  background-color: #2563eb;
+}
+
+.status-interview {
+  background-color: #d97706;
+}
+
+.status-rejected {
+  background-color: #dc2626;
+}
+
+.status-offer {
+  background-color: #16a34a;
+}
+
+.job-text {
+  margin: 8px 0;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.job-edit-title {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.job-edit-form {
+  display: grid;
+  gap: 12px;
+}
+
+.job-card-input,
+.job-card-textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+.job-card-input:focus,
+.job-card-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.job-card-textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.job-card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.job-edit-button,
+.job-save-button,
+.job-cancel-button,
+.job-delete-button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.job-edit-button:hover,
+.job-save-button:hover,
+.job-cancel-button:hover,
+.job-delete-button:hover {
+  opacity: 0.9;
+}
+
+.job-edit-button {
+  background: #2563eb;
+}
+
+.job-save-button {
+  background: #16a34a;
+}
+
+.job-cancel-button {
+  background: #6b7280;
+}
+
+.job-delete-button {
+  background: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .job-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job-badge {
+    margin-top: 4px;
+  }
+
+  .job-card-actions {
+    width: 100%;
+  }
+
+  .job-edit-button,
+  .job-save-button,
+  .job-cancel-button,
+  .job-delete-button {
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-card {
+    padding: 16px;
+  }
+
+  .job-company {
+    font-size: 18px;
+  }
+
+  .job-card-actions {
+    flex-direction: column;
+  }
+
+  .job-edit-button,
+  .job-save-button,
+  .job-cancel-button,
+  .job-delete-button {
+    width: 100%;
+  }
+}

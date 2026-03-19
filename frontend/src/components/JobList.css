@@ -1,0 +1,24 @@
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.job-list-empty {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.job-list-empty h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.job-list-empty p {
+  margin: 0;
+  color: #4b5563;
+}
