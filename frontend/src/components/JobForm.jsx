@@ -84,28 +84,34 @@ function JobForm({ onAddJob }) {
 
       <form onSubmit={handleSubmit} className="job-form">
         <input
+          id="company"
           type="text"
           name="company"
           placeholder="Company"
           value={formData.company}
           onChange={handleChange}
           className="job-input"
+          autoComplete="organization"
         />
 
         <input
+          id="position"
           type="text"
           name="position"
           placeholder="Position"
           value={formData.position}
           onChange={handleChange}
           className="job-input"
+          autoComplete="organization-title"
         />
 
         <select
+          id="status"
           name="status"
           value={formData.status}
           onChange={handleChange}
           className="job-input"
+          autoComplete="off"
         >
           <option value="Applied">Applied</option>
           <option value="Interview">Interview</option>
@@ -114,28 +120,34 @@ function JobForm({ onAddJob }) {
         </select>
 
         <input
+          id="applied_date"
           type="date"
           name="applied_date"
           value={formData.applied_date}
           onChange={handleChange}
           className="job-input"
+          autoComplete="off"
         />
 
         <input
+          id="job_link"
           type="text"
           name="job_link"
           placeholder="https://example.com/job-posting"
           value={formData.job_link}
           onChange={handleChange}
           className="job-input"
+          autoComplete="url"
         />
 
         <textarea
+          id="notes"
           name="notes"
           placeholder="Notes"
           value={formData.notes}
           onChange={handleChange}
           className="job-textarea"
+          autoComplete="off"
         />
 
         {errorMessage && <p className="form-error-message">{errorMessage}</p>}

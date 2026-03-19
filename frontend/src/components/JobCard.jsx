@@ -43,28 +43,34 @@ function JobCard({ job, onDeleteJob, onUpdateJob }) {
 
         <div className="job-edit-form">
           <input
+            id={`edit-company-${job.id}`}
             type="text"
             name="company"
             value={editedJob.company}
             onChange={handleChange}
             placeholder="Company"
             className="job-card-input"
+            autoComplete="organization"
           />
 
           <input
+            id={`edit-position-${job.id}`}
             type="text"
             name="position"
             value={editedJob.position}
             onChange={handleChange}
             placeholder="Position"
             className="job-card-input"
+            autoComplete="organization-title"
           />
 
           <select
+            id={`edit-status-${job.id}`}
             name="status"
             value={editedJob.status}
             onChange={handleChange}
             className="job-card-input"
+            autoComplete="off"
           >
             <option value="Applied">Applied</option>
             <option value="Interview">Interview</option>
@@ -73,28 +79,34 @@ function JobCard({ job, onDeleteJob, onUpdateJob }) {
           </select>
 
           <input
+            id={`edit-applied-date-${job.id}`}
             type="date"
             name="applied_date"
             value={editedJob.applied_date}
             onChange={handleChange}
             className="job-card-input"
+            autoComplete="off"
           />
 
           <input
+            id={`edit-job-link-${job.id}`}
             type="text"
             name="job_link"
             value={editedJob.job_link}
             onChange={handleChange}
             placeholder="Job link"
             className="job-card-input"
+            autoComplete="url"
           />
 
           <textarea
+            id={`edit-notes-${job.id}`}
             name="notes"
             value={editedJob.notes}
             onChange={handleChange}
             placeholder="Notes"
             className="job-card-textarea"
+            autoComplete="off"
           />
 
           <div className="job-card-actions">
